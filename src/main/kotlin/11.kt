@@ -66,7 +66,6 @@ class Monkeys() {
             }
         }
 
-        //find the two monkeys who inspected the most items
         monkeys.sortBy { it.numInspected }
 
         for (i in 0 until monkeys.size){
