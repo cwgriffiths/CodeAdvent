@@ -1,3 +1,5 @@
+package advent22
+
 import java.util.*
 
 enum class Opponent{
@@ -38,36 +40,36 @@ enum class Player{
 }
 
 /*
-enum class Player{
+enum class advent22.Player{
     X{
-        override fun score(opponent : Opponent): Int {
+        override fun score(opponent : advent22.Opponent): Int {
             return when(opponent){
-                Opponent.A -> 3
-                Opponent.B -> 1
-                Opponent.C -> 2
+                advent22.Opponent.A -> 3
+                advent22.Opponent.B -> 1
+                advent22.Opponent.C -> 2
             }
         }
     },
     Y {
-        override fun score(opponent: Opponent): Int {
+        override fun score(opponent: advent22.Opponent): Int {
             return when(opponent){
-                Opponent.A -> 3 + 1
-                Opponent.B -> 3 + 2
-                Opponent.C -> 3 + 3
+                advent22.Opponent.A -> 3 + 1
+                advent22.Opponent.B -> 3 + 2
+                advent22.Opponent.C -> 3 + 3
             }
         }
     },
     Z {
-        override fun score(opponent: Opponent): Int {
+        override fun score(opponent: advent22.Opponent): Int {
             return when(opponent){
-                Opponent.A -> 6 + 2
-                Opponent.B -> 6 + 3
-                Opponent.C -> 6 + 1
+                advent22.Opponent.A -> 6 + 2
+                advent22.Opponent.B -> 6 + 3
+                advent22.Opponent.C -> 6 + 1
             }
         }
     };
 
-    abstract fun score(opponent: Opponent): Int
+    abstract fun score(opponent: advent22.Opponent): Int
 }
  */
 

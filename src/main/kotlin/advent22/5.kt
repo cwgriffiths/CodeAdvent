@@ -1,3 +1,5 @@
+package advent22
+
 import java.util.*
 
 data class Stacks(val stacks : List<Stack<Char>> = listOf(Stack(),Stack(),Stack(),Stack(),Stack(),Stack(),Stack(),Stack(),Stack(),)){

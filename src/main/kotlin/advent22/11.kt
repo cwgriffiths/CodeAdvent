@@ -1,3 +1,5 @@
+package advent22
+
 import java.math.BigInteger
 import java.nio.file.Files
 import java.nio.file.Path
@@ -33,7 +35,7 @@ data class Monkey(
 class Monkeys() {
 
     constructor(s : String) : this() {
-        val monkeyStrings = s.trim().split("Monkey")
+        val monkeyStrings = s.trim().split("advent22.Monkey")
         monkeyStrings.forEach{ monkeyString ->
             val sc = Scanner(monkeyString.trim())
             if(sc.hasNextLine()) {
@@ -61,7 +63,7 @@ class Monkeys() {
             if(i%20==0){
                 println("Turn $i")
                 for (i in 0 until monkeys.size){
-                    println("Monkey $i inspected ${monkeys[i].numInspected} items")
+                    println("advent22.Monkey $i inspected ${monkeys[i].numInspected} items")
                 }
             }
         }
@@ -69,7 +71,7 @@ class Monkeys() {
         monkeys.sortBy { it.numInspected }
 
         for (i in 0 until monkeys.size){
-            println("Monkey $i inspected ${monkeys[i].numInspected} items")
+            println("advent22.Monkey $i inspected ${monkeys[i].numInspected} items")
         }
     }
 
@@ -85,7 +87,7 @@ class Monkeys() {
 }
 
 fun main(){
-    val file = Files.readString(Path.of("11.txt"))
+    val file = Files.readString(Path.of("2022/11.txt"))
     val monkeys = Monkeys(file)
 
     monkeys.runGame(10000)

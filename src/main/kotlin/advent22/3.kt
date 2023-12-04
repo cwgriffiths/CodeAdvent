@@ -1,3 +1,5 @@
+package advent22
+
 import java.util.*
 
 fun getPriority(a: Char) : Int {
@@ -14,7 +16,7 @@ fun main(){
         val right = word.substring(word.length/2)
         for(it in left){
             if(it in right){
-                sum += getPriority(it)
+                sum += advent22.getPriority(it)
                 println(it)
                 break
             }

@@ -1,10 +1,12 @@
+package advent22
+
 import java.nio.file.Files
 import java.nio.file.Path
 
 fun main() {
     var rowLen = 0
     var colHeight: Int
-    val forestArr = Files.readString(Path.of("08.txt")).trim().split("\n").let {
+    val forestArr = Files.readString(Path.of("2022/08.txt")).trim().split("\n").let {
         colHeight = it.size
         it.map {
             rowLen = it.trim().length

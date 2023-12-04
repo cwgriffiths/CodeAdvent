@@ -1,8 +1,10 @@
+package advent22
+
 import java.nio.file.Files
 import java.nio.file.Path
 
 fun main(){
-    val string = Files.readString(Path.of("06.txt"))
+    val string = Files.readString(Path.of("2022/06.txt"))
     val arr = CharArray(14)
     var found : Boolean
     for (i in 0..string.length){

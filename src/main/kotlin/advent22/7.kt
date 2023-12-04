@@ -1,3 +1,5 @@
+package advent22
+
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.*
@@ -32,7 +34,7 @@ data class Directory(val name: String, val files: MutableList<File>, val subDirs
         subDirs.add(Directory(name, mutableListOf(), mutableListOf(), this))
     }
     fun getSubDir(name: String): Directory {
-        return subDirs.find { it.name == name } ?: throw Exception("Directory not found")
+        return subDirs.find { it.name == name } ?: throw Exception("advent22.Directory not found")
     }
     fun getSize(): Int {
         return files.sumOf { it.size } + subDirs.sumOf { it.getSize() }
@@ -55,7 +57,7 @@ data class Directory(val name: String, val files: MutableList<File>, val subDirs
 var currentDir : Directory = Directory.root
 
 fun main(){
-    val tree = Files.readString(Path.of("07.txt"))
+    val tree = Files.readString(Path.of("2022/07.txt"))
     val sc = Scanner(tree)
 
     while (sc.hasNextLine()) {
@@ -76,7 +78,7 @@ fun main(){
             }
         }
     }
-    //println(Directory.root)
+    //println(advent22.Directory.root)
     val target = 30000000 - 21618835
     val directories = Directory.root.getAllSubDirs().filter { it.getSize() > target }.sortedBy { it.getSize() }
     println(directories.first().getSize())
